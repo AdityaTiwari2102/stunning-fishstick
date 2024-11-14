@@ -29,3 +29,5 @@
 
 en:
   hello: "Hello world"
+  not_found: "Record not found"
+  generic_error: "Something went wrong"
