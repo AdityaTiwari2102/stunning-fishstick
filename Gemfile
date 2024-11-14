@@ -44,7 +44,13 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  # Helper for writing factories for Ruby tests
+  gem "factory_bot_rails", "~> 6.4", ">= 6.4.4"
+
+  # Generate fake data for your tests
+  gem "faker", "~> 3.5", ">= 3.5.1"
 end
 
 # Use for counter cache
-gem 'counter_culture', '~> 3.8', '>= 3.8.2'
+gem "counter_culture", "~> 3.8", ">= 3.8.2"
