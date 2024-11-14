@@ -4,4 +4,6 @@ class Membership < ApplicationRecord
 
   counter_culture :user, column_name: "groups_count"
   counter_culture :group, column_name: "users_count"
+
+  validates :user, uniqueness: { scope: :group }
 end
