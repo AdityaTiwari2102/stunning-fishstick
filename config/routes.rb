@@ -10,6 +10,12 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :groups, only: %i[index]
+      resources :posts, only: %i[index create] do
+        member do
+          post :comment
+          patch :claps
+        end
+      end
       resources :users, only: %i[index]
     end
   end
