@@ -45,3 +45,6 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 end
+
+# Use for counter cache
+gem 'counter_culture', '~> 3.8', '>= 3.8.2'
