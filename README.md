@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Implement APIs for a social networking website/app’s feed system.
 
-Things you may want to cover:
+## Setup
+- Clone the repository in your local machine.
+- Run `bin/rails db:setup`, this will also seed data for all the model
+- Run `bin/dev` or `rails s` to start the server and `bin/rails c` or `rails c` for rails console
 
-* Ruby version
+## System requirements
 
-* System dependencies
+- Ruby - 3.3.6
+- Rails - 8.0.0
+- Git (configured with your GitHub account)
+- Database - PostgreSQL
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Requirement
+Users should be able to
+- Browse a feed/timeline of posts from groups they have joined
+- Post inside a group and browse this group’s posts
+- Like on a post
+- Comment on a post
