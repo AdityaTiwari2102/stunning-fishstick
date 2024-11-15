@@ -3,7 +3,7 @@ class Api::V1::PostsController < Api::V1::BaseController
 
   # GET /api/v1/posts
   def index
-    pagy, posts = pagy(Post.where(group_id: params[:group_id]), page: params[:page], limit: params[:per_page])
+    pagy, posts = pagy(Post.includes(:group, comments: :user).where(group_id: params[:group_id]), page: params[:page], limit: params[:per_page])
     render_json_with_pagination(pagy, posts, PostSerializer)
   end
 
