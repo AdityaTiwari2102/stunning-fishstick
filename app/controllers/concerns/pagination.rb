@@ -11,8 +11,8 @@ module Pagination
     params[:page] = Pagy::DEFAULT[:page] unless params.key?(:page)
     params[:per_page] = Pagy::DEFAULT[:limit] unless params.key?(:per_page)
 
-    respond_with_error('Invalid page.') unless params[:page].to_i.positive?
-    respond_with_error('Invalid per page.') unless params[:per_page].to_i.positive?
+    respond_with_error("Invalid page.") unless params[:page].to_i.positive?
+    respond_with_error("Invalid per page.") unless params[:per_page].to_i.positive?
   end
 
   private
