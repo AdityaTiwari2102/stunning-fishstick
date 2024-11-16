@@ -86,11 +86,13 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_15_065048) do
     t.string "last_name"
     t.string "phone_number"
     t.string "email", null: false
+    t.string "user_type", default: "new_parent", null: false
     t.integer "groups_count", default: 0
     t.integer "posts_count", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["user_type"], name: "index_users_on_user_type"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

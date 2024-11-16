@@ -7,7 +7,13 @@ class User < ApplicationRecord
   has_many :memberships
   has_many :groups, through: :memberships
 
-  validates :first_name, :email, presence: true
+  enum :user_type, {
+    new_parent: "new_parent",
+    commited_parent: "commited_parent",
+    parent_mentor: "parent_mentor"
+  }
+
+  validates :first_name, :email, :user_type, presence: true
   validates :email, uniqueness: true
 
   def full_name
