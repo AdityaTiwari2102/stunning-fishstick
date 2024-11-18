@@ -62,4 +62,4 @@ gem "counter_culture", "~> 3.8", ">= 3.8.2"
 gem "active_model_serializers", "~> 0.10.14"
 
 # To paginate the ActiveRecords
-gem "pagy", "~> 9.2", ">= 9.2.2"
+gem "pagy", "~> 9.3"
