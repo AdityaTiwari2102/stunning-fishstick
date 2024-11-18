@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :first_name, :last_name, :phone_number, :email, :user_type, :groups_count, :posts_count, :joined_at
+  attributes :first_name, :last_name, :phone_number, :email, :user_type, :groups_count, :posts_count, :joined_at, :photo
 
   def user_type
     object.user_type.titleize
@@ -7,5 +7,9 @@ class UserSerializer < ActiveModel::Serializer
 
   def joined_at
     object.created_at.strftime("%D")
+  end
+
+  def photo
+    object.photo&.url
   end
 end

@@ -8,6 +8,9 @@ class CommentSerializer < ActiveModel::Serializer
   end
 
   def posted_by
-    object.user.full_name
+    {
+      name: object.user.full_name,
+      photo: object.user.photo&.url
+    }
   end
 end
