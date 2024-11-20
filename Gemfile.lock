@@ -267,7 +267,7 @@ GEM
       rubocop-rails
     ruby-progressbar (1.13.0)
     securerandom (0.3.2)
-    sidekiq (7.3.5)
+    sidekiq (7.3.6)
       connection_pool (>= 2.3.0)
       logger
       rack (>= 2.2.4)
@@ -334,7 +334,7 @@ DEPENDENCIES
   puma (>= 5.0)
   rails (~> 8.0.0)
   rubocop-rails-omakase
-  sidekiq (~> 7.3, >= 7.3.5)
+  sidekiq (~> 7.3)
   solid_cable
   solid_cache
   solid_queue
