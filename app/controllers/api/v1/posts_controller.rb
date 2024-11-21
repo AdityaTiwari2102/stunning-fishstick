@@ -57,7 +57,14 @@ class Api::V1::PostsController < Api::V1::BaseController
   end
 
   def index_filter_params
-    params.fetch(:filter, {})
-          .permit(:body, :group_id)
+    filter = params.fetch(:filter, {})
+                    .permit(:body, :group_id, :my_memberships_only, :user_id)
+
+    if filter[:my_memberships_only]
+      user_group_ids = User.find(filter[:user_id]).groups.ids
+      filter[:group_id] = ([ filter[:group_id] ] + user_group_ids).compact
+    end
+
+    filter
   end
 end
