@@ -21,7 +21,6 @@ class Api::V1::PostsController < Api::V1::BaseController
 
   # POST /api/v1/posts
   def create
-    debugger
     post = Post.new(post_params)
     if post.save
       respond_with_success("Created", :created)
