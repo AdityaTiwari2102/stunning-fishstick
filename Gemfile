@@ -55,7 +55,7 @@ group :development, :test do
   gem "faker", "~> 3.5", ">= 3.5.1"
 
   # Help to kill N+1 queries and unused eager loading
-  gem 'bullet', '~> 8.0'
+  gem "bullet", "~> 8.0"
 end
 
 # Use for counter cache
