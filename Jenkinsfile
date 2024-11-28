@@ -5,7 +5,7 @@ pipeline {
     stage('Build') {
       agent {
         docker {
-          image ruby:3.3.6-slim
+          image 'ruby:3.3.6-slim'
         }
       }
       steps {
