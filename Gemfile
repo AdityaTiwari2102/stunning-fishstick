@@ -62,7 +62,7 @@ end
 gem "counter_culture", "~> 3.8", ">= 3.8.2"
 
 # To serialize Active Record objects on rendering
-gem "active_model_serializers", "~> 0.10.14"
+gem "active_model_serializers", "~> 0.10.15"
 
 # To paginate the ActiveRecords
 gem "pagy", "~> 9.2", ">= 9.2.2"
