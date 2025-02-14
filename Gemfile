@@ -33,7 +33,7 @@ gem "thruster", require: false
 # gem "image_processing", "~> 1.2"
 
 # Background processing
-gem "sidekiq", "~> 7.3", ">= 7.3.5"
+gem "sidekiq", "~> 7.3"
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
 # gem "rack-cors"
